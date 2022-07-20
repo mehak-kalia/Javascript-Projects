@@ -121,7 +121,7 @@ while(choice == "yes"){
     let option = Number(prompt(" Select an Option (0, 1 or 2): "))
 
     if(option == 0){
-        FilterByType()
+        FilterByType();
 
     }else if(option == 1){
         SearchByPromo('NEW20')
