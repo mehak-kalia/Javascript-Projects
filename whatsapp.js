@@ -192,20 +192,7 @@ function sortConversationsByMessagesCharLen(){
                         myWhatsApp[j+1] = temp;
                     }
                 }
-            }
-
-        
-        
-
-
-
-
-
-
-        
-
-
-        
+            }      
    
 }
 for(let idx = 0; idx<myWhatsApp.length; idx++){
