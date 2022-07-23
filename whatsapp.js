@@ -173,15 +173,45 @@ function sortConversationByMessages(){
 };
 
 function sortConversationsByMessagesCharLen(){
-    let messagesArray = [];
-
     for(let conversation of myWhatsApp){
-        messagesArray.push(conversation['messages'])
-        
-        
-    }
+        for(let idx = 0 ; idx<conversation['messages'].length; idx++){
+            conversation['messages'][idx]['textstring'] = ""
+            conversation['messages'][idx]['textstring'] += conversation['messages'][idx]['text']
 
-    console.log(messagesArray);
+            //console.log(conversation['messages'][idx]['textstring'] );
+
+        }
+        let n = conversation['messages'].length
+
+        
+            for(let i=0;i<n;i++){
+                for(let j=0; j<n-i-1; j++){
+                    if(conversation['messages'][i]['textstring'].length > conversation['messages'][i]['textstring'].length){
+                        let temp = myWhatsApp[j];
+                        myWhatsApp[j] = messagesArray[j+1];
+                        myWhatsApp[j+1] = temp;
+                    }
+                }
+            }
+
+        
+        
+
+
+
+
+
+
+        
+
+
+        
+   
+}
+for(let idx = 0; idx<myWhatsApp.length; idx++){
+    console.log(myWhatsApp[idx]);
+}
+
 }
 
 // Create a menu driven program
