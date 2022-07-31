@@ -2,10 +2,11 @@ var prompt = require('prompt-sync')()
 
 let noOfBricks = Number(prompt("Enter Required No. Of Bricks:"));
 
+function brickInWall(input){
 let bricksPlaced = 0
 let johnTurn = 1
 
-while(bricksPlaced<noOfBricks){
+while(bricksPlaced<input){
 
     // // for(let i =0; i<noOfBricks; i++){
     //     bricksPlaced+= 1
@@ -21,10 +22,10 @@ while(bricksPlaced<noOfBricks){
     
     bricksPlaced += johnTurn
     let initialbricks = bricksPlaced-johnTurn
-    if(bricksPlaced>=noOfBricks){
+    if(bricksPlaced>=input){
         console.log("working1");
-        let init = johnTurn + (noOfBricks - bricksPlaced) 
-        bricksPlaced += (noOfBricks - bricksPlaced)
+        let init = johnTurn + (input - bricksPlaced) 
+        bricksPlaced += (input - bricksPlaced)
         console.log("Johns turn"+initialbricks +"+"+ init+"="+bricksPlaced);
         console.log("Last Brick Planted by John");
         let jackTurn = johnTurn-1
@@ -36,10 +37,10 @@ while(bricksPlaced<noOfBricks){
 
     bricksPlaced += johnTurn*2
     let initialbricks2 = bricksPlaced -(johnTurn*2)
-    if(bricksPlaced>=noOfBricks){
+    if(bricksPlaced>=input){
         console.log("working3");
-        let init2 = johnTurn*2 + (noOfBricks - bricksPlaced);
-        bricksPlaced += (noOfBricks - bricksPlaced)
+        let init2 = johnTurn*2 + (input - bricksPlaced);
+        bricksPlaced += (input - bricksPlaced)
         console.log("Jacks turn "+initialbricks2 +"+"+ init2+"="+bricksPlaced);
         console.log("Last Brick Planted by Jack");
         console.log("No. Of Turns\nJohn: "+johnTurn+"\nJack: "+johnTurn);
@@ -54,4 +55,6 @@ while(bricksPlaced<noOfBricks){
 
 }
 
-console.log(bricksPlaced);
+console.log(bricksPlaced);}
+
+brickInWall(noOfBricks);
