@@ -18,4 +18,3 @@ console.log("DATA BEFORE: "+data);
 sortNumbers(data);
 console.log("DATA BEFORE: "+data);
 
-let products
